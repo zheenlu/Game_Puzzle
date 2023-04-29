@@ -1,0 +1,20 @@
+FINAL PROJECT DESIGN
+Name: Zhen Lu
+
+
+First off, I designed the gameboard including all the frames, buttons, etc.
+
+Second, in my  place_shuffled_tiles method, by using hideturtle(), I first
+put all tiles in order to get the ordered position list. Then, I created an
+index list from, for example mario.puz, 0 to 15. Then, I shuffle the index list,
+meanwhile, let the shuffled index to pick what turtle to put on the ordered tile.
+For example, if the shuffled index list is [4, 6, 8, 2], then turtle4 will go to
+turtle0's position, turtle6 will go to turtle2's position, turtle8 will got to turtle3's position.
+
+Therefore, I use the index list to compare whether the player move all the tiles in order
+which the index list will be [0, 1, 2, 3, 4,…]. Besides, in my get_screen_click method,
+I make sure tile move happens only if the player clicked within the square of all tiles.
+And I created two scenarios, the first is if the player clicked reset button,
+the second scenario is divided into 4 parts--player clicks on the up, down, left,
+and right of the blank tile (valid movable tiles).
+And to compare if all the indexes are back to [0, 1, 2, 3…] to tell whether the player win or lose.
